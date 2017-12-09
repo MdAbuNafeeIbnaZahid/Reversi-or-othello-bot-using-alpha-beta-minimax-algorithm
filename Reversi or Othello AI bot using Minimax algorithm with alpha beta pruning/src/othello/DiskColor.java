@@ -1,4 +1,4 @@
-package alpha_beta_minimax;
+package othello;
 
 /**
  * Created by nafee on 12/8/17.

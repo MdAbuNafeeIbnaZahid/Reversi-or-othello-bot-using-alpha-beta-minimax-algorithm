@@ -77,16 +77,58 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Board.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/othello/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="15" column="81" lean-forward="false" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
+            <state relative-caret-position="455">
+              <caret line="42" column="4" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#345#356#0" expanded="true" />
                 <element signature="e#816#817#0" expanded="true" />
                 <element signature="e#862#863#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OthelloState.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/othello/OthelloState.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="515">
+              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding>
+                <element signature="e#195#196#0" expanded="true" />
+                <element signature="e#234#235#0" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#357#358#0" expanded="true" />
+                <element signature="e#388#389#0" expanded="true" />
+                <element signature="e#416#417#0" expanded="true" />
+                <element signature="e#457#458#0" expanded="true" />
+                <element signature="e#491#492#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OthelloAction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/othello/OthelloAction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#401#402#0" expanded="true" />
+                <element signature="e#427#428#0" expanded="true" />
+                <element signature="e#462#463#0" expanded="true" />
+                <element signature="e#492#493#0" expanded="true" />
+                <element signature="e#522#523#0" expanded="true" />
+                <element signature="e#551#552#0" expanded="true" />
+                <element signature="e#589#590#0" expanded="true" />
+                <element signature="e#622#623#0" expanded="true" />
+                <element signature="e#661#662#0" expanded="true" />
+                <element signature="e#693#694#0" expanded="true" />
+                <element signature="e#746#747#0" expanded="true" />
+                <element signature="e#788#789#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -149,6 +191,8 @@
         <option value="$PROJECT_DIR$/src/driver/Main.java" />
         <option value="$PROJECT_DIR$/src/othello/Direction.java" />
         <option value="$PROJECT_DIR$/src/othello/Board.java" />
+        <option value="$PROJECT_DIR$/src/othello/OthelloState.java" />
+        <option value="$PROJECT_DIR$/src/othello/OthelloAction.java" />
       </list>
     </option>
   </component>
@@ -620,13 +664,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/othello/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="15" column="81" lean-forward="false" selection-start-line="15" selection-start-column="81" selection-end-line="15" selection-end-column="81" />
+        <state relative-caret-position="455">
+          <caret line="42" column="4" lean-forward="true" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#345#356#0" expanded="true" />
             <element signature="e#816#817#0" expanded="true" />
             <element signature="e#862#863#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othello/OthelloAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#401#402#0" expanded="true" />
+            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#551#552#0" expanded="true" />
+            <element signature="e#589#590#0" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#693#694#0" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#788#789#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othello/OthelloState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#234#235#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
           </folding>
         </state>
       </provider>

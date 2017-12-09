@@ -7,3 +7,5 @@ public enum DiskColor {
     WHITE,
     BLACK;
 }
+
+

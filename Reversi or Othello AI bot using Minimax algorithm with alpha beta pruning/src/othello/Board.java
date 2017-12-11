@@ -41,4 +41,9 @@ public class Board
                 "grid=" + Arrays.deepToString(grid) +
                 '}';
     }
+
+    boolean isValidAction()
+    {
+        
+    }
 }

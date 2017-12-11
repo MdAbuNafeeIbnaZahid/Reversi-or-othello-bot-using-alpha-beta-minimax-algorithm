@@ -215,4 +215,62 @@ public class OthelloBoard
         // for a valid action it needs to color at least one disk to its own color
         return totalSwapCntInAllDirections > 0;
     }
+
+
+    int getWhiteCnt()
+    {
+        assert grid.length == ROW : " grid is deformed, grid.length = " + grid.length + ", " +
+                " ROW = " + ROW;
+
+        int ret = 0;
+
+        for (DiskColor[] row : grid)
+        {
+            assert row.length == COLUMN : "grid is deformed, row.length = " + row.length + ", " +
+                    " COLUMN =  " + COLUMN;
+
+            for (DiskColor color : row)
+            {
+                if ( color.equals(DiskColor.WHITE) )
+                {
+                    ret++;
+                }
+            }
+        }
+
+        return ret;
+    }
+
+    int getBlackCnt()
+    {
+        assert grid.length == ROW : " grid is deformed, grid.length = " + grid.length + ", " +
+                " ROW = " + ROW;
+
+        int ret = 0;
+
+        for (DiskColor[] row : grid)
+        {
+            assert row.length == COLUMN : "grid is deformed, row.length = " + row.length + ", " +
+                    " COLUMN =  " + COLUMN;
+
+            for (DiskColor color : row)
+            {
+                if ( color.equals(DiskColor.BLACK) )
+                {
+                    ret++;
+                }
+            }
+        }
+
+        return ret;
+    }
+
+    int getWhiteCntMinusBlackCnt()
+    {
+        int whiteCnt = getWhiteCnt();
+        int blackCnt = getBlackCnt();
+        int ret = whiteCnt - blackCnt;
+
+        return ret;
+    }
 }

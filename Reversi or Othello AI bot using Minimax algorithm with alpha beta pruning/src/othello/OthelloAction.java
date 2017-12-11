@@ -7,37 +7,32 @@ import alpha_beta_minimax.Action;
  */
 public class OthelloAction extends Action {
 
-    private int row;
-    private int column;
+    private Position position;
     private DiskColor diskColor;
 
-    public OthelloAction(int row, int col, DiskColor diskColor) {
-        this.row = row;
-        this.column = col;
+    public OthelloAction(Position position, DiskColor diskColor) {
+
+
+
+        if ( diskColor == null )
+        {
+            throw new IllegalArgumentException(" diskColor can't be null ");
+        }
+
+        this.position = position;
         this.diskColor = diskColor;
     }
 
-    public int getRow() {
-        return row;
+
+
+    public Position getPosition() {
+        return position;
     }
 
-    public void setRow(int row) {
-        this.row = row;
-    }
-
-    public int getColumn() {
-        return column;
-    }
-
-    public void setColumn(int col) {
-        this.column = col;
-    }
 
     public DiskColor getDiskColor() {
         return diskColor;
     }
 
-    public void setDiskColor(DiskColor diskColor) {
-        this.diskColor = diskColor;
-    }
+
 }

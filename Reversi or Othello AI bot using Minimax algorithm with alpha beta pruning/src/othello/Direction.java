@@ -5,27 +5,27 @@ package othello;
  */
 public class Direction
 {
-    private int dr;
-    private int dc;
+    private int dRow;
+    private int dColumn;
 
     public Direction(int dr, int dc) {
-        this.dr = dr;
-        this.dc = dc;
+        this.dRow = dr;
+        this.dColumn = dc;
     }
 
-    public int getDr() {
-        return dr;
+    public int getdRow() {
+        return dRow;
     }
 
-    public void setDr(int dr) {
-        this.dr = dr;
+    public void setdRow(int dr) {
+        this.dRow = dr;
     }
 
-    public int getDc() {
-        return dc;
+    public int getdColumn() {
+        return dColumn;
     }
 
-    public void setDc(int dc) {
-        this.dc = dc;
+    public void setdColumn(int dColumn) {
+        this.dColumn = dColumn;
     }
 }

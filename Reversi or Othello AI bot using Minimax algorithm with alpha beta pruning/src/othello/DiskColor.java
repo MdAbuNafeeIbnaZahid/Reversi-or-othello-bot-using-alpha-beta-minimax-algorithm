@@ -6,6 +6,12 @@ package othello;
 public enum DiskColor {
     WHITE,
     BLACK;
+
+
+    @Override
+    public String toString() {
+        return "DiskColor{}";
+    }
 }
 
 

@@ -6,7 +6,7 @@ package othello;
 public class OthelloState
 {
     private DiskColor currentMoveColor;
-    private Board board;
+    private OthelloBoard othelloBoard;
 
     public DiskColor getCurrentMoveColor() {
         return currentMoveColor;
@@ -16,11 +16,11 @@ public class OthelloState
         this.currentMoveColor = currentMoveColor;
     }
 
-    public Board getBoard() {
-        return board;
+    public OthelloBoard getOthelloBoard() {
+        return othelloBoard;
     }
 
-    public void setBoard(Board board) {
-        this.board = board;
+    public void setOthelloBoard(OthelloBoard othelloBoard) {
+        this.othelloBoard = othelloBoard;
     }
 }

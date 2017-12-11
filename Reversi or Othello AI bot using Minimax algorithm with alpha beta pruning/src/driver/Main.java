@@ -1,6 +1,6 @@
 package driver;
 
-import othello.Board;
+import othello.OthelloBoard;
 
 /**
  * Created by nafee on 12/9/17.
@@ -8,7 +8,9 @@ import othello.Board;
 public class Main {
 
     public static void main(String[] args) {
-        Board board = new Board();
-        System.out.println( board );
+
+
+        OthelloBoard othelloBoard = new OthelloBoard();
+        System.out.println(othelloBoard);
     }
 }

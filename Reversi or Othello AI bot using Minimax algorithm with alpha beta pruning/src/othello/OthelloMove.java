@@ -5,12 +5,12 @@ import alpha_beta_minimax.Action;
 /**
  * Created by nafee on 12/9/17.
  */
-public class OthelloAction extends Action {
+public class OthelloMove extends Action {
 
     private Position position;
     private DiskColor diskColor;
 
-    public OthelloAction(Position position, DiskColor diskColor) {
+    public OthelloMove(Position position, DiskColor diskColor) {
 
 
 

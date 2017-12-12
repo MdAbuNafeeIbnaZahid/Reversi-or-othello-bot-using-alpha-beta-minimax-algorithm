@@ -13,6 +13,42 @@ public class OthelloBoard
     public final static int ROW = 8;
     public final static int COLUMN = 8;
 
+
+    public static List<OthelloMove> getAllMovesOfAColor( DiskColor diskColor )
+    {
+        if ( diskColor == null )
+        {
+            throw new IllegalArgumentException("diskColor can't be null ");
+        }
+
+        List<OthelloMove> allMovesOfAColor = new ArrayList<OthelloMove>();
+        List<Position> allPositions = getAllPositions();
+
+        for (Position position : allPositions)
+        {
+            OthelloMove action = new OthelloMove(position, diskColor);
+            allMovesOfAColor.add(action);
+        }
+
+        return allMovesOfAColor;
+    }
+
+    public static List<OthelloMove> getAllMovesOfAllColor( DiskColor diskColor )
+    {
+        List<OthelloMove> allActionsOfAllColors = new ArrayList<OthelloMove>();
+
+        List<OthelloMove> allActionsOfWhite = getAllMovesOfAColor(DiskColor.WHITE);
+        assert ( allActionsOfWhite != null ) : " allActionsOfWhite is null ";
+        allActionsOfAllColors.addAll(allActionsOfWhite);
+
+        List<OthelloMove> allActionsOfBlack = getAllMovesOfAColor(DiskColor.BLACK);
+        assert (allActionsOfBlack != null) : " allActionsOfBlack can't be null ";
+        allActionsOfAllColors.addAll(allActionsOfBlack);
+
+        return allActionsOfAllColors;
+    }
+
+
     public static List<Position> getAllPositions()
     {
         List<Position> allPositions = new ArrayList<Position>();
@@ -46,8 +82,8 @@ public class OthelloBoard
     {
         assert position != null : "position can't be null";
 
-        int row = position.row;
-        int column = position.column;
+        int row = position.getRow();
+        int column = position.getColumn();
 
         if ( row < 0 || row >= ROW )
         {
@@ -66,17 +102,168 @@ public class OthelloBoard
 
     DiskColor[][] grid;
 
+    void setDiskColorOfAPosition(Position position, DiskColor diskColor)
+    {
+        assert position != null : " position must not be null ";
+        assert isInBoard(position) : "position is outside of board";
+
+        int row = position.getRow();
+        int column = position.getColumn();
+
+        grid[ row ][ column ] = diskColor;
+    }
+
+    DiskColor getDiskColorOfAPosition( Position position )
+    {
+        assert position != null : " position must not be null ";
+        assert isInBoard(position) : "position is outside of board";
+
+        int row = position.getRow();
+        int column = position.getColumn();
+
+        return grid[row][column];
+    }
+
+    void toggleADisk(Position position)
+    {
+        assert position != null : " position can't be null ";
+
+        assert isInBoard(position) : " position is outside of board ";
+
+        assert getDiskColor(position) != null : " before toggling diskColor can't be null ";
+
+        DiskColor currentDiskColor = getDiskColor(position);
+        DiskColor oppositeDiskColor = DiskColor.getOpponentDiskColor(currentDiskColor);
+
+        setDiskColorOfAPosition(position, oppositeDiskColor);
+    }
+
 
     public OthelloBoard()
     {
         grid = new DiskColor[ROW][COLUMN];
+        grid[ 3 ][ 3 ] = DiskColor.WHITE;
+        grid[ 3 ][ 4 ] = DiskColor.BLACK;
+
+        grid[ 4 ][ 3 ] = DiskColor.BLACK;
+        grid[ 4 ][ 4 ] = DiskColor.WHITE;
     }
 
     @Override
     public String toString() {
-        return "OthelloBoard{" +
-                "grid=" + Arrays.deepToString(grid) +
-                '}';
+
+
+        String ret = "\n\n";
+
+        ret += "     ";
+        for (int a = 0; a < COLUMN; a++)
+        {
+            ret += "  " + (char)(a+'A') + "  ";
+        }
+        ret += "\n";
+
+        for ( int a = 0; a < ROW; a++ )
+        {
+            ret += "  " + a + "  ";
+            for (int b = 0; b < COLUMN; b++)
+            {
+                DiskColor diskColor = grid[a][b];
+                String col = "";
+
+                if ( diskColor == null )
+                {
+                    col = "_";
+                }
+                else
+                {
+                    switch ( diskColor )
+                    {
+                        case WHITE: col = "W";
+                                    break;
+
+                        case BLACK: col = "B";
+                                    break;
+
+                        default:    throw new RuntimeException(" Unknown DiskColor type ");
+
+                    }
+                }
+
+
+
+                ret += "  " + col + "  ";
+
+            }
+
+            ret += "\n\n";
+        }
+
+        return ret;
+
+    }
+
+
+
+
+
+    public String toString( List<Position> allPossibleMovePositions) {
+
+
+        String ret = "\n\n";
+
+        ret += "     ";
+        for (int a = 0; a < COLUMN; a++)
+        {
+            ret += "  " + (char)(a+'A') + "  ";
+        }
+        ret += "\n";
+
+        for ( int a = 0; a < ROW; a++ )
+        {
+            ret += "  " + a + "  ";
+            for (int b = 0; b < COLUMN; b++)
+            {
+                Position currentPosition = new Position(a, b);
+                DiskColor diskColor = grid[a][b];
+                String col = "";
+
+                if ( diskColor == null )
+                {
+                    col = "_";
+                    if ( allPossibleMovePositions.contains(currentPosition) )
+                    {
+                        col = "?";
+                    }
+                }
+                else
+                {
+                    assert ! allPossibleMovePositions.contains( currentPosition ) : " we can't" +
+                            "place a disk on top of another disk ";
+
+                    switch ( diskColor )
+                    {
+                        case WHITE: col = "W";
+                            break;
+
+                        case BLACK: col = "B";
+                            break;
+
+                        default:    throw new RuntimeException(" Unknown DiskColor type ");
+
+                    }
+                }
+
+
+
+                ret += "  " + col + "  ";
+
+            }
+
+            ret += "\n\n";
+        }
+
+        return ret;
+
     }
 
 
@@ -132,7 +319,7 @@ public class OthelloBoard
         return ret;
     }
 
-    int getNumberOfSwapsInOneDirection( OthelloAction action, Direction direction )
+    int getNumberOfSwapsInOneDirection( OthelloMove action, Direction direction )
     {
         assert (action != null) : "action can't be null";
         assert (direction != null) : "direction can't be null";
@@ -143,7 +330,7 @@ public class OthelloBoard
         return swapCntInOneDirection;
     }
 
-    int getTotalSwapCntInAllDirections( OthelloAction action )
+    int getTotalSwapCntInAllDirections( OthelloMove action )
     {
         assert (action != null) : "action can't be null";
 
@@ -156,7 +343,7 @@ public class OthelloBoard
 
 
 
-    Set<Position> getSwapPositionsInOneDirection(OthelloAction action, Direction direction )
+    Set<Position> getSwapPositionsInOneDirection(OthelloMove action, Direction direction )
     {
         Set<Position> swapPositionsInOneDirection = new HashSet<Position>();
 
@@ -220,20 +407,42 @@ public class OthelloBoard
         }
     }
 
-    Set<Position> getSwapPositionsInAllDirections( OthelloAction action )
+
+    void makeMove( OthelloMove othelloMove )
     {
-        assert action != null : "action can't be null";
+        assert othelloMove != null : " othelloMoveCan't be null ";
+
+        assert isValidMove(othelloMove) : " otelloMove is not valid ";
+
+
+        Set<Position> swapPositionsInAllDirections = getSwapPositionsInAllDirections(othelloMove);
+        assert ! swapPositionsInAllDirections.isEmpty() : " a valid move " +
+                "will have some disks to toggle ";
+        for (Position position : swapPositionsInAllDirections)
+        {
+            toggleADisk( position );
+        }
+
+        // finally setting the color of newDisk
+        setDiskColorOfAPosition(othelloMove.getPosition(), othelloMove.getDiskColor());
+    }
+
+
+
+    Set<Position> getSwapPositionsInAllDirections( OthelloMove othelloMove )
+    {
+        assert othelloMove != null : "othelloMove can't be null";
         Set<Position> swapPositionsInAllDirections = new HashSet<Position>();
         for (Direction direction : allDirections)
         {
-            Set<Position> swapPositionsInOneDirection = getSwapPositionsInOneDirection(action, direction);
+            Set<Position> swapPositionsInOneDirection = getSwapPositionsInOneDirection(othelloMove, direction);
             swapPositionsInAllDirections.addAll( swapPositionsInOneDirection );
         }
 
         return swapPositionsInAllDirections;
     }
 
-    boolean isValidAction(OthelloAction action)
+    boolean isValidMove(OthelloMove action)
     {
         assert (action != null) : " action can't be null ";
 

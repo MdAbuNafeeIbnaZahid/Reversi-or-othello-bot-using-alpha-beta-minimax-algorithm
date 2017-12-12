@@ -12,10 +12,10 @@ public interface State {
 
     List<Action> getAllPossibleActions();
 
+    State getNextState(Action action);
+
 //    MinimaxVal calcMaxVal(int alpha, int beta, int moreDepthToDive);
 //
 //    MinimaxVal calcMinVal(int alpha, int beta, int moreDepthToDive);
-
-    boolean isValidAction( Action action );
 
 }

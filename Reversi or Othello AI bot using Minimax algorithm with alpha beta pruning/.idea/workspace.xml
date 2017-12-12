@@ -29,27 +29,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DiskColor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/othello/DiskColor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="421">
-              <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-              <folding>
-                <element signature="e#767#768#0" expanded="true" />
-                <element signature="e#801#802#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/driver/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -75,35 +60,35 @@
       <file leaf-file-name="OthelloState.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/othello/OthelloState.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="142" column="34" lean-forward="false" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
+            <state relative-caret-position="137">
+              <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2552#2565#0" expanded="true" />
                 <element signature="e#3162#3170#0" expanded="true" />
-                <element signature="e#6908#6918#0" expanded="true" />
+                <element signature="e#6917#6927#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AiVsHuman.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Position.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/othello/Position.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="596">
+              <caret line="48" column="14" lean-forward="true" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AiVsHuman.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/driver/AiVsHuman.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="48" column="0" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="48" selection-end-column="0" />
+            <state relative-caret-position="354">
+              <caret line="40" column="51" lean-forward="false" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#376#377#0" expanded="true" />
-                <element signature="e#420#421#0" expanded="true" />
-                <element signature="e#461#462#0" expanded="true" />
-                <element signature="e#494#495#0" expanded="true" />
-                <element signature="e#550#551#0" expanded="true" />
-                <element signature="e#594#595#0" expanded="true" />
-                <element signature="e#623#624#0" expanded="true" />
-                <element signature="e#651#652#0" expanded="true" />
-                <element signature="e#690#691#0" expanded="true" />
-                <element signature="e#724#725#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -112,14 +97,14 @@
       <file leaf-file-name="OthelloMove.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/othello/OthelloMove.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
+            <state relative-caret-position="1020">
               <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OthelloNoMove.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OthelloNoMove.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/othello/OthelloNoMove.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="250">
@@ -145,8 +130,8 @@
       <file leaf-file-name="AIVsAI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/driver/AIVsAI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1033">
-              <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+            <state relative-caret-position="720">
+              <caret line="137" column="5" lean-forward="false" selection-start-line="100" selection-start-column="4" selection-end-line="137" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1269#1270#0" expanded="true" />
@@ -198,10 +183,11 @@
       <find>getNex</find>
       <find>getNextState</find>
       <find>Othello</find>
+      <find>getALLpo</find>
     </findStrings>
     <replaceStrings>
-      <replace>OthelloMove</replace>
       <replace>allMovesOfAColor</replace>
+      <replace>OthelloMove</replace>
     </replaceStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -220,25 +206,25 @@
         <option value="$PROJECT_DIR$/src/othello/OthelloAction.java" />
         <option value="$PROJECT_DIR$/src/othello/OthelloResult.java" />
         <option value="$PROJECT_DIR$/src/alpha_beta_minimax/State.java" />
-        <option value="$PROJECT_DIR$/src/othello/Position.java" />
         <option value="$PROJECT_DIR$/src/alpha_beta_minimax/Utility.java" />
         <option value="$PROJECT_DIR$/src/alpha_beta_minimax/MiniMaxUtility.java" />
         <option value="$PROJECT_DIR$/src/alpha_beta_minimax/Result.java" />
         <option value="$PROJECT_DIR$/src/alpha_beta_minimax/MinimaxVal.java" />
         <option value="$PROJECT_DIR$/src/alpha_beta_minimax/Heuristics.java" />
         <option value="$PROJECT_DIR$/src/othelloStateFactory/OthelloStateFactory.java" />
-        <option value="$PROJECT_DIR$/src/driver/AiVsHuman.java" />
         <option value="$PROJECT_DIR$/src/driver/PositionalVsAbsoluteCount.java" />
         <option value="$PROJECT_DIR$/src/othello/AbsoluteCountHeuristic.java" />
         <option value="$PROJECT_DIR$/src/othello/PositionalHeuristic.java" />
         <option value="$PROJECT_DIR$/src/othello/DiskColor.java" />
-        <option value="$PROJECT_DIR$/src/othello/OthelloState.java" />
         <option value="$PROJECT_DIR$/src/alpha_beta_minimax/ABMiniMax.java" />
-        <option value="$PROJECT_DIR$/src/driver/Main.java" />
         <option value="$PROJECT_DIR$/src/driver/AIVsAI.java" />
         <option value="$PROJECT_DIR$/src/othello/OthelloBoard.java" />
         <option value="$PROJECT_DIR$/src/othello/OthelloMove.java" />
         <option value="$PROJECT_DIR$/src/othello/OthelloNoMove.java" />
+        <option value="$PROJECT_DIR$/src/othello/Position.java" />
+        <option value="$PROJECT_DIR$/src/othello/OthelloState.java" />
+        <option value="$PROJECT_DIR$/src/driver/Main.java" />
+        <option value="$PROJECT_DIR$/src/driver/AiVsHuman.java" />
       </list>
     </option>
   </component>
@@ -642,13 +628,13 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38854167" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.465625" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15699281" sideWeight="0.49583334" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15699281" sideWeight="0.49583334" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -705,9 +691,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="17" column="36" lean-forward="false" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -762,7 +746,7 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2552#2565#0" expanded="true" />
             <element signature="e#3162#3170#0" expanded="true" />
-            <element signature="e#6908#6918#0" expanded="true" />
+            <element signature="e#6917#6927#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -821,9 +805,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="33" lean-forward="false" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -851,7 +833,7 @@
             <element signature="imports" expanded="true" />
             <element signature="e#2552#2565#0" expanded="true" />
             <element signature="e#3162#3170#0" expanded="true" />
-            <element signature="e#6908#6918#0" expanded="true" />
+            <element signature="e#6917#6927#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -902,15 +884,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="17" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/othello/Position.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="7" column="12" lean-forward="false" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
           <folding />
         </state>
       </provider>
@@ -982,26 +955,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/driver/AiVsHuman.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="48" column="0" lean-forward="true" selection-start-line="46" selection-start-column="4" selection-end-line="48" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#420#421#0" expanded="true" />
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#594#595#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#651#652#0" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#724#725#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/othello/DiskColor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="421">
@@ -1013,34 +966,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/othello/OthelloState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="142" column="34" lean-forward="false" selection-start-line="142" selection-start-column="34" selection-end-line="142" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2552#2565#0" expanded="true" />
-            <element signature="e#3162#3170#0" expanded="true" />
-            <element signature="e#6908#6918#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/alpha_beta_minimax/ABMiniMax.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/driver/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1060,10 +990,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/alpha_beta_minimax/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othello/OthelloNoMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="e#181#182#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othello/OthelloMove.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/othello/Position.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="596">
+          <caret line="48" column="14" lean-forward="true" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/driver/AIVsAI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1033">
-          <caret line="90" column="0" lean-forward="false" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        <state relative-caret-position="720">
+          <caret line="137" column="5" lean-forward="false" selection-start-line="100" selection-start-column="4" selection-end-line="137" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1269#1270#0" expanded="true" />
@@ -1086,29 +1051,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/alpha_beta_minimax/Action.java">
+    <entry file="file://$PROJECT_DIR$/src/othello/OthelloState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/othello/OthelloMove.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="38" column="18" lean-forward="false" selection-start-line="38" selection-start-column="18" selection-end-line="38" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/othello/OthelloNoMove.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="18" lean-forward="false" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        <state relative-caret-position="137">
+          <caret line="135" column="0" lean-forward="false" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
           <folding>
-            <element signature="e#181#182#0" expanded="true" />
-            <element signature="e#221#222#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#2552#2565#0" expanded="true" />
+            <element signature="e#3162#3170#0" expanded="true" />
+            <element signature="e#6917#6927#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/driver/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/driver/AiVsHuman.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="40" column="51" lean-forward="false" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

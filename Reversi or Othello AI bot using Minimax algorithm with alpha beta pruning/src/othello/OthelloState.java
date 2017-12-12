@@ -227,7 +227,9 @@ public class OthelloState implements State, Serializable
         return ret;
     }
 
-    List<Position> getAllPossibleMovePositions()
+
+
+    public List<Position> getAllPossibleMovePositions()
     {
         List<Position> allPossibleMovePositions = new ArrayList<Position>();
 

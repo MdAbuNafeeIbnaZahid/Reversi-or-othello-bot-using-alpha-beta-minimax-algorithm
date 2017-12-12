@@ -18,10 +18,15 @@ public class Main {
         Heuristics positionalHeuristics = new PositionalHeuristic();
         Heuristics absoluteCntHeuristics = new AbsoluteCountHeuristic();
 
-        AIVsAI aiVsAI = new AIVsAI(5, positionalHeuristics, absoluteCntHeuristics,
-               20 );
 
-        aiVsAI.playSingleGame();
+        AiVsHuman aiVsHuman = new AiVsHuman(positionalHeuristics, 3);
+        aiVsHuman.playSingleGame();
+
+
+//        AIVsAI aiVsAI = new AIVsAI(5, positionalHeuristics, absoluteCntHeuristics,
+//               20 );
+//
+//        aiVsAI.playSingleGame();
 
     }
 }

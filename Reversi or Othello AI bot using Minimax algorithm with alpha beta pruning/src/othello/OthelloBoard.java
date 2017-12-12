@@ -134,6 +134,9 @@ public class OthelloBoard
 
     int getNumberOfSwapsInOneDirection( OthelloAction action, Direction direction )
     {
+        assert (action != null) : "action can't be null";
+        assert (direction != null) : "direction can't be null";
+
         Set<Position> swapPositionsInOneDirection = getSwapPositionsInOneDirection(action, direction);
         int swapCntInOneDirection = swapPositionsInOneDirection.size();
 
@@ -142,6 +145,8 @@ public class OthelloBoard
 
     int getTotalSwapCntInAllDirections( OthelloAction action )
     {
+        assert (action != null) : "action can't be null";
+
         Set<Position> swapPositionsInAllDirection = getSwapPositionsInAllDirections(action);
         int swapCntInAllDirections = swapPositionsInAllDirection.size();
 

@@ -2,9 +2,7 @@ package othello;
 
 import alpha_beta_minimax.Action;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by nafee on 12/9/17.
@@ -134,9 +132,29 @@ public class OthelloBoard
         return ret;
     }
 
-
     int getNumberOfSwapsInOneDirection( OthelloAction action, Direction direction )
     {
+        Set<Position> swapPositionsInOneDirection = getSwapPositionsInOneDirection(action, direction);
+        int swapCntInOneDirection = swapPositionsInOneDirection.size();
+
+        return swapCntInOneDirection;
+    }
+
+    int getTotalSwapCntInAllDirections( OthelloAction action )
+    {
+        Set<Position> swapPositionsInAllDirection = getSwapPositionsInAllDirections(action);
+        int swapCntInAllDirections = swapPositionsInAllDirection.size();
+
+        return swapCntInAllDirections;
+    }
+
+
+
+
+    Set<Position> getSwapPositionsInOneDirection(OthelloAction action, Direction direction )
+    {
+        Set<Position> swapPositionsInOneDirection = new HashSet<Position>();
+
         assert action != null : "Action can't be null";
         assert direction != null : " direction can't be null ";
 
@@ -160,7 +178,8 @@ public class OthelloBoard
             if ( ! isInBoard(currentPosition) )
             {
                 // We are out of board !!!!
-                return 0;
+                swapPositionsInOneDirection = new HashSet<Position>();
+                return swapPositionsInOneDirection;
             }
 
             assert ( isInBoard(currentPosition) );
@@ -175,36 +194,38 @@ public class OthelloBoard
             // currentPosition can contain NO disk at all (Swap can't be completed)
             if ( isBoardPositionEmpty(currentPosition) )
             {
-                return 0;
+                swapPositionsInOneDirection = new HashSet<Position>();
+                return swapPositionsInOneDirection;
             }
 
             //  currentPosition can contain same color as Action (End of swap)
             if ( isBoardPositionContainsColor(currentPosition, actionDiskColor) )
             {
-                return ret;
+                return swapPositionsInOneDirection;
             }
 
             // currentPosition can conatin opponent color of Action (Increment swap)
             if ( isBoardPositionContainsOpponentColor(currentPosition, actionDiskColor) )
             {
-                ret++; // We are incrementing number of swaps
+                swapPositionsInOneDirection.add(currentPosition);
+                // We are adding current position with the the swapPositions
 
                 currentPosition = currentPosition.getOneHopDisPos(direction);
             }
         }
     }
 
-    int getTotalSwapCntInAllDirections( OthelloAction action )
+    Set<Position> getSwapPositionsInAllDirections( OthelloAction action )
     {
         assert action != null : "action can't be null";
-        int ret = 0;
+        Set<Position> swapPositionsInAllDirections = new HashSet<Position>();
         for (Direction direction : allDirections)
         {
-            int swapInThisDirection = getNumberOfSwapsInOneDirection(action, direction);
-            ret += swapInThisDirection;
+            Set<Position> swapPositionsInOneDirection = getSwapPositionsInOneDirection(action, direction);
+            swapPositionsInAllDirections.addAll( swapPositionsInOneDirection );
         }
 
-        return ret;
+        return swapPositionsInAllDirections;
     }
 
     boolean isValidAction(OthelloAction action)

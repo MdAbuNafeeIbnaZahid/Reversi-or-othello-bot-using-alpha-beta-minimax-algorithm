@@ -15,6 +15,21 @@ public class OthelloBoard
     public final static int ROW = 8;
     public final static int COLUMN = 8;
 
+    public static List<Position> getAllPositions()
+    {
+        List<Position> allPositions = new ArrayList<Position>();
+        for (int a = 0; a < ROW; a++)
+        {
+            for (int b = 0; b < COLUMN; b++)
+            {
+                Position position = new Position(a, b);
+                allPositions.add( position );
+            }
+        }
+
+        return allPositions;
+    }
+
     private static final List<Direction> allDirections = new ArrayList<Direction>();
     static
     {

@@ -45,6 +45,17 @@ public class OthelloState implements State
     }
 
 
+    boolean othelloActionContainsSameDiskColor(OthelloAction action)
+    {
+        assert (action != null) : "action can't be null";
+
+        DiskColor actionDiskColor = action.getDiskColor();
+        assert actionDiskColor != null : " actionDiskColor can't be null ";
+
+        assert (this.currentMoveColor != null) : " currentMoveColor can't be null ";
+
+        return actionDiskColor.equals( this.currentMoveColor );
+    }
 
     @Override
     public boolean isValidAction(Action action) {
@@ -59,8 +70,20 @@ public class OthelloState implements State
             throw  new RuntimeException(" othelloBoard can't be null ");
         }
 
-        assert  ( action instanceof OthelloAction ) : " action must be an OthelloAction";
+        if ( !  ( action instanceof OthelloAction ) )
+        {
+            throw new IllegalArgumentException("  action must be an OthelloAction ");
+        }
         OthelloAction othelloAction = (OthelloAction) action;
+
+
+
+        if ( ! othelloActionContainsSameDiskColor(othelloAction) )
+        {
+            // State is due to place a particular disk color
+            // But the action intends to move the opposite color
+            return false;
+        }
 
         boolean ret = othelloBoard.isValidAction( othelloAction );
 

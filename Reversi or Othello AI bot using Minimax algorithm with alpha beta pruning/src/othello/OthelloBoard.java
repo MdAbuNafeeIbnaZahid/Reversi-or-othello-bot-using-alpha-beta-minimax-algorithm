@@ -2,12 +2,13 @@ package othello;
 
 import alpha_beta_minimax.Action;
 
+import java.io.Serializable;
 import java.util.*;
 
 /**
  * Created by nafee on 12/9/17.
  */
-public class OthelloBoard
+public class OthelloBoard implements Serializable
 {
     // row and columns are indexed from 0 to 7
     public final static int ROW = 8;
@@ -467,7 +468,7 @@ public class OthelloBoard
     }
 
 
-    int getWhiteCnt()
+    int getDiskColorCnt(DiskColor diskColor)
     {
         assert grid.length == ROW : " grid is deformed, grid.length = " + grid.length + ", " +
                 " ROW = " + ROW;
@@ -481,7 +482,8 @@ public class OthelloBoard
 
             for (DiskColor color : row)
             {
-                if ( color.equals(DiskColor.WHITE) )
+
+                if ( color == diskColor )
                 {
                     ret++;
                 }
@@ -491,34 +493,12 @@ public class OthelloBoard
         return ret;
     }
 
-    int getBlackCnt()
-    {
-        assert grid.length == ROW : " grid is deformed, grid.length = " + grid.length + ", " +
-                " ROW = " + ROW;
 
-        int ret = 0;
-
-        for (DiskColor[] row : grid)
-        {
-            assert row.length == COLUMN : "grid is deformed, row.length = " + row.length + ", " +
-                    " COLUMN =  " + COLUMN;
-
-            for (DiskColor color : row)
-            {
-                if ( color.equals(DiskColor.BLACK) )
-                {
-                    ret++;
-                }
-            }
-        }
-
-        return ret;
-    }
 
     int getWhiteCntMinusBlackCnt()
     {
-        int whiteCnt = getWhiteCnt();
-        int blackCnt = getBlackCnt();
+        int whiteCnt = getDiskColorCnt(DiskColor.WHITE);
+        int blackCnt = getDiskColorCnt(DiskColor.BLACK);
         int ret = whiteCnt - blackCnt;
 
         return ret;

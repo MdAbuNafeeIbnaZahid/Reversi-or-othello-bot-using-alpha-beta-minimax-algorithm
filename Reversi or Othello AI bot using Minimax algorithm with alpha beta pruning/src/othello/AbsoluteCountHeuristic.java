@@ -8,6 +8,11 @@ import alpha_beta_minimax.State;
  */
 public class AbsoluteCountHeuristic implements Heuristics {
     @Override
+    public String toString() {
+        return "AbsoluteCountHeuristic{}";
+    }
+
+    @Override
     public double getHVal(State state) {
         if ( ! ( state instanceof OthelloState ) )
         {
@@ -17,5 +22,7 @@ public class AbsoluteCountHeuristic implements Heuristics {
         OthelloState othelloState = (OthelloState) state;
 
         return othelloState.getEvaluationVal();
+
+
     }
 }

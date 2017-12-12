@@ -7,5 +7,8 @@ import alpha_beta_minimax.Action;
  */
 public class OthelloNoMove extends Action
 {
-
+    @Override
+    public String toString() {
+        return "OthelloNoMove{}";
+    }
 }

@@ -19,10 +19,10 @@ public enum DiskColor {
         switch (diskColor)
         {
             case WHITE:
-                diskColor = BLACK;
+                opponentDiskColor = BLACK;
                 break;
             case BLACK:
-                diskColor = WHITE;
+                opponentDiskColor = WHITE;
                 break;
             default:
                 throw new IllegalArgumentException(" Unknown disk color ");

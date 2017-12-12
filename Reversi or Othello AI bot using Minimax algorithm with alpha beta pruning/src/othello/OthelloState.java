@@ -4,6 +4,7 @@ import alpha_beta_minimax.Action;
 import alpha_beta_minimax.State;
 import my_util.UnoptimizedDeepCopy;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
@@ -11,7 +12,7 @@ import java.util.Set;
 /**
  * Created by nafee on 12/9/17.
  */
-public class OthelloState implements State
+public class OthelloState implements State, Serializable
 {
     private DiskColor currentMoveColor;
     private OthelloBoard othelloBoard;
@@ -47,6 +48,11 @@ public class OthelloState implements State
 
     @Override
     public boolean isTerminal() {
+        if ( currentMoveColor == null )
+        {
+            throw new RuntimeException(" currentMoveColor can't be null while checking for " +
+                    " terminality ");
+        }
 
         List<OthelloMove> allPossibleMoves = getAllPossibleMoves();
         if ( ! allPossibleMoves.isEmpty() )
@@ -85,6 +91,7 @@ public class OthelloState implements State
     {
         List<OthelloMove> allPossibleMoves = new ArrayList<OthelloMove>();
 
+        assert currentMoveColor != null : " currentMoveColor can't be null ";
         List<OthelloMove> allMovesOfCurrentColor = OthelloBoard.getAllMovesOfAColor(currentMoveColor);
 
         for (OthelloMove othelloMove : allMovesOfCurrentColor)
@@ -132,20 +139,45 @@ public class OthelloState implements State
 
         if ( action instanceof OthelloNoMove )
         {
+//            System.out.println("action instanceof OthelloNoMove");
             OthelloState nextState = ( OthelloState ) UnoptimizedDeepCopy.copy( this );
+
+            assert nextState.currentMoveColor != null : " nextState is a clone. It can't have" +
+                    " currentMoveColor as null ";
 
             DiskColor opponentMoveColor = DiskColor.getOpponentDiskColor(this.currentMoveColor);
 
+
+
             nextState.setCurrentMoveColor( opponentMoveColor );
+
+            assert nextState.currentMoveColor != null : " nextState is a clone. It can't have" +
+                    " currentMoveColor as null ";
+
+
             return nextState;
         }
         else if ( action instanceof OthelloMove )
         {
+//            System.out.println(" action instanceof OthelloMove ");
             OthelloMove othelloMove = (OthelloMove)action;
             OthelloState nextState = ( OthelloState ) UnoptimizedDeepCopy.copy( this );
 
+            assert nextState.getCurrentMoveColor() != null : " nextState is a clone. It can't have" +
+                    " currentMoveColor as null ";
+
+
             nextState.othelloBoard.makeMove( othelloMove);
+            assert nextState.getCurrentMoveColor() != null : " nextState is a clone. It can't have" +
+                    " currentMoveColor as null ";
+
+
             nextState.currentMoveColor = DiskColor.getOpponentDiskColor( nextState.currentMoveColor );
+            assert nextState.getCurrentMoveColor() != null : " nextState is a clone. It can't have" +
+                    " currentMoveColor as null ";
+
+
+
 
             return nextState;
         }

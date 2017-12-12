@@ -35,4 +35,11 @@ public class OthelloMove extends Action {
     }
 
 
+    @Override
+    public String toString() {
+        return "OthelloMove{" +
+                "position=" + position +
+                ", diskColor=" + diskColor +
+                '}';
+    }
 }

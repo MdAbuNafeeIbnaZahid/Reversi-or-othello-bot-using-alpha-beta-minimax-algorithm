@@ -12,6 +12,11 @@ public class ABMiniMax
     private Heuristics heuristics;
 
     public ABMiniMax(Heuristics heuristics) {
+
+        if ( heuristics == null )
+        {
+            throw new IllegalArgumentException("heuristics can't be null");
+        }
         this.heuristics = heuristics;
     }
 
@@ -23,12 +28,21 @@ public class ABMiniMax
         this.heuristics = heuristics;
     }
 
-    Action alphaBetaSearch(State state, int depth)
+    public Action alphaBetaMaxSearch(State state, int depth)
     {
         assert depth > 0 : " depth = " + depth ;
         MinimaxVal minimaxVal = getMaxVal(state, Integer.MIN_VALUE, Integer.MAX_VALUE, depth);
         return minimaxVal.getAction();
     }
+
+    public Action alphaBetaMinSearch(State state, int depth)
+    {
+        assert depth > 0 : " depth = " + depth ;
+        MinimaxVal minimaxVal = getMinVal(state, Integer.MIN_VALUE, Integer.MAX_VALUE, depth);
+        return minimaxVal.getAction();
+    }
+
+
 
     MinimaxVal getMaxVal(State state, double alpha, double beta, int depth)
     {
@@ -90,6 +104,8 @@ public class ABMiniMax
 
         if ( depth <= 0 )
         {
+            assert heuristics != null : "heuristics can't be null";
+            assert state != null : " state can't be null ";
             double hVal = heuristics.getHVal( state );
             ret.setScore( hVal );
 

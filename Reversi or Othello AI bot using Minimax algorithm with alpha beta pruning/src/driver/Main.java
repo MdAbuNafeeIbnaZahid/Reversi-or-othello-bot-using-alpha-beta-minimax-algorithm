@@ -1,8 +1,7 @@
 package driver;
 
-import othello.DiskColor;
-import othello.OthelloBoard;
-import othello.OthelloState;
+import alpha_beta_minimax.Heuristics;
+import othello.*;
 import othelloStateFactory.OthelloStateFactory;
 
 /**
@@ -13,8 +12,16 @@ public class Main {
     public static void main(String[] args) {
 
 
-        OthelloState initialState = OthelloStateFactory.getInitialOthelloState( DiskColor.WHITE );
-        System.out.println(initialState);
+//        OthelloState initialState = OthelloStateFactory.getInitialOthelloState( DiskColor.WHITE );
+//        System.out.println(initialState);
+
+        Heuristics positionalHeuristics = new PositionalHeuristic();
+        Heuristics absoluteCntHeuristics = new AbsoluteCountHeuristic();
+
+        AIVsAI aiVsAI = new AIVsAI(5, positionalHeuristics, absoluteCntHeuristics,
+               20 );
+
+        aiVsAI.playSingleGame();
 
     }
 }

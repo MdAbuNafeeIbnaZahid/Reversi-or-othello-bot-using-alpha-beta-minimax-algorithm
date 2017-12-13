@@ -61,7 +61,10 @@ public class AiVsHuman
         while (true)
         {
             String str = scanner.next();
-            assert str.length() == 2 ;
+            if ( str.length() != 2 )
+            {
+                continue;
+            }
             int row = str.charAt(0)-'0';
             int column = str.charAt(1)-'A';
 
